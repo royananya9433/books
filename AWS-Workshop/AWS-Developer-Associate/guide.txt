@@ -1,0 +1,112 @@
+1.)Cloud9 is used for deployment
+2.)XRay and CloudWatch- monitoring services
+3.)Code Pipeline- for CI/CD
+4.)Failover mechanisms are configured in Route53
+5.)Route53- Multi Availablility Zone deployment
+6.)Elastic Beanstalk- Multi Region deployment
+7.)Suppose we create a S3 bucket using AWS Cloud Formation script, we can't rename or recreate a resource(here S3).
+
+
+AWS CloudFormation:
+1.)AWSTemplateFormatVersion - Version of Template Engine
+2.)Condition - resource allocation can be based on some conditions.
+3.)Output-end result of the stack creation.
+
+Intrinsic Functions in AWS CloudFormation:
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html
+
+Serverless development-->
+These are the things need to be done:
+	Build and deploy, monitor and maintain services.
+
+DynamoDb-to store session data
+
+
+Serverless applications questions comes
+types of services used in serverless applications
+From Deployment - 22% questions
+
+
+Network ACL - to manage inbound and outbound connections
+Subnets are subparts in VPC
+
+VPC flow logs-- inbound and outbound requests are logged in VPC logs (by default it's not enabled. Have to enable)
+
+Amazon certificate manager --store certificates over here.
+
+Application can encrypt data before storage in AWS -- client side encryption.(we can send the keys)
+Key management service helps in server side encrption in AWS.
+
+
+You can encryption of data in S3 bucket by enabling data encryption
+With Amazon Galcier data is encrypted by default
+
+Don't hardcode access key and secret key in your application. For SDK, Use a signed URL and give a timeout so that it's invalid after that timeout.. You can use Token service STS for authentication.(IMPORTANT question)
+
+IAM policy can be assigned to IAM groups and IAM individual users.
+
+IAM roles .. STS can help authenticate role for using other services.
+IAM roles can have an access from account to another using this..--> for multi-account access.
+
+
+Links:
+
+Side Encryption with Amazon S3-Managed Encryption Keys (SSE-S3)
+http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html 
+https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html 
+
+IAM user
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html 
+
+IAM policy
+http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html 
+
+IAM policy elements
+http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html 
+
+IAM policy evaluation logic 
+http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html 
+
+IAM group
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html 
+
+IAM role
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html 
+
+AWS Security Token Service API references
+http://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html 
+
+Identity providers and federation
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html 
+
+Sample IIS authentication proxy code for an Active Directory use case
+https://aws.amazon.com/code/identity-federation-sample-application-for-an-active-directory-use-case/ 
+
+Amazon Cognito
+https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-oidc-idp.html 
+
+Security in VPC
+http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Security.html 
+
+IAM identities
+http://docs.aws.amazon.com/IAM/latest/UserGuide/id.html
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DEVELOPMENT using AWS-->
+
+In exam no specific code, language, development related questions come.. Only services used ..
+How can i manage, implement and deploy services come in exam..
+
+Latency
+
+CloudFront is used with S3 bucket then Cloud Front will reduce latency.
+
+Inside S3 , objects are stored.
+
+If there are different domains, and if we access S# bucket from my web application we need to enable CORS.
+
+Policies can be enabled at granular level.. like on resources (refer screenshot : no 37)
+
+
+
